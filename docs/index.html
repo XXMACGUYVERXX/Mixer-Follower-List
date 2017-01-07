@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Beam Followers List</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./res/style.css">
+    </head>
+    <body>
+        <div class="head">
+            <span>Beam Follower List</span>
+        </div>
+
+        <div class="wrapper">
+            <div class="main">
+                <noscript>This page relies on javascript to be enabled</noscript>
+                <div class="hasscript">
+
+                    <div class="section">
+                        <div class="title">About</div>
+                        <div class="content">
+                            <p>This site looks up a channel's follower list and sorts them by ascending by date followed</p>
+                            <p>Be warned, the look ups take place in your browser. Since beam rate-limits requests to its API on a per IP basis excessive use of this may result in you being unable to access the API for upto an hour.</p>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="title">Follower List</div>
+                        <div class="content" id="chaninputform">
+                            <div id="invalidChanError">Invalid channel name or id</div>
+                            <form name="followerlookup" action="./followers.html" onsubmit="return validate.call(event);">
+                            <div class="flex">
+                                <div><input type="text" placeholder="Channel Name or ID" name="chan"/></div>
+                                <div class="noflex"><input type="submit" value="Lookup" /></div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="title">Warranty</div>
+                        <div class="content mono">
+                            This software is provided "AS IS", without warranty
+                            of any kind, expressed or implied, including but
+                            not limited to the warranties of mechantability,
+                            fitness for a particular purpose and noninfringment.
+                            In no event shall the authors or copyright holders
+                            be liable for any claim, damages or other liability,
+                            whether in an action or contract, tort or otherwise,
+                            arising from, out of or in connection with the
+                            software or the use or the dealings of the software.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+        <script type="text/javascript">
+            function showError() {
+                document.getElementById("invalidChanError").style.display = "block";
+            }
+            function validate() {
+                var chan = document.forms.followerlookup.chan.value;
+                console.log(chan);
+                if (!/^(?:(?:\d+)|(?:[a-z][a-z\d_]+))$/i.test(chan)) {
+                    this.preventDefault();
+                    showError();
+                    return false;
+                }
+                return true;
+            }
+            document.getElementsByClassName("hasscript")[0].style.display = "block";
+        </script>
+    </body>
+</html>

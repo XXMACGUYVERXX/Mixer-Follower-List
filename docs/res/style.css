@@ -1,0 +1,160 @@
+@media (min-width: 720px) {
+    .wrapper{
+        border: 1px solid rgb(192, 192, 192);
+        border-top: 0px;
+        border-bottom: 0px;
+        box-shadow: 0 0 3px rgba(0,0,0, .1);
+    }
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+    font-size: 16px;
+    font-family: sans-serif;
+    height: 100%;
+    min-height: 100%;
+}
+p {margin-top: 0px}
+.mono {font-family: monospace}
+.flex {display: flex; flex-wrap: wrap}
+.flex > div {flex-grow: 1}
+.flex > .noflex {flex-grow: 0}
+
+.head {
+  background-color: rgb(225,225,255);
+  box-shadow: 0 3px 3px rgba(0,0,0, .1);
+  z-index: 5;
+  padding: 1em;
+  color: black;
+  font-weight: bold;
+  font-size: 1.25em;
+  font-family: sans-serif;
+  border-bottom: 1px solid rgb(192,192,192);
+  text-align: center;
+}
+.wrapper {
+    background-color: white;
+    max-width: 720px;
+    margin: 0 auto;
+    z-index: 0;
+    min-height: 100%;
+}
+.main {padding: 1.5em}
+.main div.hasscript {display: none}
+.main .section {margin-bottom: 2em}
+.main .section .title {
+    font-weight: bold;
+    font-family: serif;
+    font-size: 1.25em;
+}
+.main .section .content {padding: 1em}
+.main .section .content input {
+    font-size: 1.25em;
+    width: 100%;
+}
+#invalidChanError {
+    background-color: rgb(255, 225, 225);
+    margin-bottom: .25em;
+    padding: .5em .5em .4em .5em;
+    border-radius: .25em;
+    color: red;
+    border: 1px solid rgba(255,0,0,.9);
+    font-weight: bold;
+    text-align: center;
+    display: none;
+}
+
+#followerlookuplog .logerror {
+    color: red;
+}
+#followerlookuplog .logsuccess {
+    color: rgb(0, 128, 0);
+}
+
+
+
+
+
+
+
+
+
+
+#followerlookuptable {
+    display: none;
+}
+#followerlookuptable table {
+    width: 100%;
+    border-spacing: 0;
+    background-color: rgb(245, 245, 245);
+}
+#followerlookuptable table td {
+    padding: .25em;
+    border-bottom: 1px solid rgb(192,192,192);
+}
+#followerlookuptable table thead td {
+  font-weight: bold;
+  font-size: 1.25em;
+  padding-left: 0;
+  background-color: white;
+
+}
+#followerlookuptable table tbody tr:not(.nofollowers) td:not(:last-child) {
+  border-right: 1px solid rgb(192,192,192);
+}
+#followerlookuptable .nofollowers td {
+    padding: 2em;
+    background-color: rgb(225,225,225);
+    text-align: center;
+}
+
+#followerlookuptable table tbody tr:nth-child(2n) td {
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fadein {
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 1s; /* Firefox < 16 */
+        -ms-animation: fadein 1s; /* Internet Explorer */
+         -o-animation: fadein 1s; /* Opera < 12.1 */
+            animation: fadein 1s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
