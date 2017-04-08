@@ -220,7 +220,7 @@
                     followers.push({
                         username: item.username,
                         id: item.channel.id,
-                        date: (new Date(item.followed[0].createdAt)).getTime()
+                        date: (new Date(item.followed.createdAt)).getTime()
                     });
                 });
                 log.info("- Added " + json.length + " users to the follower list");
